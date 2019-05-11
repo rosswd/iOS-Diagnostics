@@ -363,7 +363,7 @@ def request(context, flow):
 
 
 def saveContent(flow, prefix):
-    decodedData = StringIO.StringIO()
+    decodedData = StringIO
     decodedData.write(flow.request.get_decoded_content())
 
     mimeType = flow.request.headers.get('Content-Type', '')
