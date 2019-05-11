@@ -1,10 +1,9 @@
-from mitmproxy.models import flow
-from mitmproxy.models import HTTPResponse
-from netlib.http import Headers
+from mitmproxy import flow
+from mitmproxy import http
 import cgi
 import re
 from gzip import GzipFile
-import StringIO
+from io import StringIO
 import time
 
 
