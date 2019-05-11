@@ -378,8 +378,11 @@ def saveContent(flow, prefix):
         logs.write(query['log_archive'][0])
 
 def respond(flow, content):
-    resp = HTTPResponse("HTTP/1.1", 200, "OK",
-                        Headers(Content_Type="text/xml"),
-                        content)
+    resp = http.HTTPResponsehttp.make(
+        200, 
+        "OK",
+        {"Content_Type": "text/xml"},
+        content
+    )
     flow.reply(resp)
 
